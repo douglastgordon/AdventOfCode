@@ -1,4 +1,3 @@
-require 'byebug'
 input = []
 File.open('d2_p1_input.txt').each do |line|
   input << line.chomp
