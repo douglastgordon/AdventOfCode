@@ -1,5 +1,3 @@
-require 'byebug'
-
 triangle_count = 0
 
 
