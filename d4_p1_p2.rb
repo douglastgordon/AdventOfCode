@@ -14,6 +14,10 @@ def sum_real_rooms(rooms)
     check_sum = check_sum(room)
     sector_id = sector_id(room)
     if real_room?(frequency_hash, check_sum)
+
+      puts decrypted(room, sector_id)
+      puts sector_id
+      puts
       sum += sector_id
     end
   end
@@ -68,6 +72,17 @@ def real_room?(hash, check_sum)
   end
 
   top_five.split("").sort.join("") == check_sum.sort.join("")
+end
+
+def decrypted(room, id)
+  output = ""
+  room.chars.each do |char|
+    if LETTERS.include?(char)
+      new_idx = (LETTERS.index(char) + id.to_i) % 26
+      output << LETTERS[new_idx]
+    end
+  end
+  output
 end
 
 p sum_real_rooms(rooms)
