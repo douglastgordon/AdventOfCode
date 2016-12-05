@@ -14,7 +14,7 @@ File.open('d3_p1_input.txt').each do |triangle|
   triangles << triangle
 end
 
-triangles = triangles.transpose
+triangloues = triangles.transpose
 triangles.each do |row|
   i = 0
   while i < row.length - 2
