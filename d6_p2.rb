@@ -13,7 +13,7 @@ File.open('d6_input.txt').each do |line|
   line.chomp.chars.each_with_index do |char, i|
     pos_arr[i][char] += 1
   end
-end
+endh
 
 
 def min(hash)
