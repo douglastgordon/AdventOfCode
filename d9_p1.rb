@@ -19,6 +19,7 @@ def decrypt2
       i += 1
     end
   end
+  
   p output
   output.chomp.length
 end
